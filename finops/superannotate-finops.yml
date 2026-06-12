@@ -1,0 +1,81 @@
+specificationVersion: "1.0"
+id: superannotate-finops
+name: SuperAnnotate FinOps
+description: >
+  FinOps Framework FOCUS-aligned cost and usage considerations for SuperAnnotate
+  platform consumption. SuperAnnotate pricing is custom and requires direct
+  engagement with their sales team. Cost drivers include plan tier, compute
+  hours consumed by the Orchestrate automation engine, number of team users,
+  data volume processed, and add-on professional services such as AI DataOps
+  consulting.
+url: https://www.superannotate.com/pricing
+provider: SuperAnnotate
+currency: USD
+billingModels:
+  - name: Subscription
+    description: >
+      Annual or multi-year subscription contracts negotiated directly with
+      SuperAnnotate sales. Pricing is not publicly listed and is scoped to
+      the customer's specific usage needs.
+    type: subscription
+    cadence: annual
+costDrivers:
+  - name: Plan Tier
+    description: >
+      Base cost is determined by the selected plan tier (Starter, Pro,
+      Enterprise). Higher tiers unlock additional compute hours, SSO,
+      dedicated support, and advanced analytics.
+    type: tier
+    impact: high
+  - name: Orchestrate Compute Hours
+    description: >
+      The Orchestrate automation engine consumes compute hours for event-driven
+      pipelines and custom actions. Each plan tier includes a fixed allotment;
+      overages or additional compute may incur additional cost.
+    type: usage
+    unit: compute hours
+    impact: high
+    tiers:
+      - tier: Starter
+        included: 1000
+      - tier: Pro
+        included: 2500
+      - tier: Enterprise
+        included: 10000
+  - name: Users and Seats
+    description: >
+      Team size and number of annotators, reviewers, and administrators
+      may influence contract pricing.
+    type: seats
+    impact: medium
+  - name: Data Volume
+    description: >
+      Volume of images, video frames, text documents, and audio files
+      annotated through the platform may factor into enterprise pricing.
+    type: usage
+    unit: items
+    impact: medium
+  - name: Professional Services
+    description: >
+      Enterprise plans include a dedicated solutions engineer and AI DataOps
+      consulting. Additional consulting engagements may be available at
+      additional cost.
+    type: services
+    impact: low-to-medium
+optimization:
+  - name: Right-Size Compute Hours
+    description: >
+      Monitor Orchestrate compute hour consumption relative to your plan
+      allotment. If consumption consistently falls well below the allotment,
+      consider negotiating a lower tier at renewal.
+    category: rightsizing
+  - name: Consolidate Teams
+    description: >
+      Consolidating annotation work under fewer teams can reduce administrative
+      overhead and potentially simplify contract terms.
+    category: consolidation
+  - name: Annual Commitment
+    description: >
+      Committing to annual or multi-year contracts typically yields better
+      pricing than month-to-month arrangements.
+    category: commitment-discounts

@@ -1,0 +1,83 @@
+aid: superannotate
+name: SuperAnnotate
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+url: https://raw.githubusercontent.com/api-evangelist/superannotate/refs/heads/main/apis.yml
+created: 2026-06-12
+modified: 2026-06-12
+specificationVersion: "0.19"
+description: >
+  SuperAnnotate is an AI data annotation platform purpose-built for computer
+  vision and NLP teams that need to build, fine-tune, and iterate machine
+  learning models with high-quality training data. The platform provides a
+  Python SDK and REST API for managing annotation projects, datasets, folders,
+  items, annotation classes, exports, and team workflows programmatically.
+  SuperAnnotate's Orchestrate module enables event-driven automation pipelines
+  with configurable compute hours, while Agent Hub offers MCP server integration
+  for AI agent workflows. The platform integrates natively with AWS, GCP, Azure,
+  Databricks, and Snowflake, supporting enterprise-grade data governance and
+  security requirements.
+tags:
+  - AI
+  - Annotation
+  - Data Labeling
+  - Computer Vision
+  - NLP
+  - Machine Learning
+  - Training Data
+  - Image Annotation
+  - Video Annotation
+  - Text Annotation
+  - Audio Annotation
+  - MLOps
+apis:
+  - aid: superannotate:superannotate-api
+    name: SuperAnnotate API
+    type: REST
+    description: >
+      REST API and Python SDK for managing annotation projects, datasets,
+      folders, items, annotations, annotation classes, exports, custom metadata,
+      subsets, images, and team operations on the SuperAnnotate platform.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://doc.superannotate.com/docs/api-reference
+    baseURL: https://api.superannotate.com
+    tags:
+      - Annotation
+      - Projects
+      - Datasets
+      - Items
+      - Exports
+      - Team Management
+    properties:
+      - type: Documentation
+        url: https://doc.superannotate.com/docs/api-reference
+      - type: PythonSDK
+        url: https://superannotate.readthedocs.io/en/stable/
+      - type: Authentication
+        url: https://doc.superannotate.com/docs/token-for-python-sdk
+common:
+  - type: Website
+    url: https://www.superannotate.com
+  - type: Documentation
+    url: https://doc.superannotate.com/docs/introduction
+  - type: GitHubOrganization
+    url: https://github.com/superannotateai
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/superannotate/
+  - type: X
+    url: https://x.com/superannotate
+  - type: Blog
+    url: https://www.superannotate.com/blog
+  - type: Pricing
+    url: https://www.superannotate.com/pricing
+  - type: StatusPage
+    url: https://status.superannotate.com/
+  - type: Plans
+    url: plans/superannotate-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/superannotate-rate-limits.yml
+  - type: FinOps
+    url: finops/superannotate-finops.yml
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

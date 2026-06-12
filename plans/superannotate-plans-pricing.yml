@@ -1,0 +1,54 @@
+specificationVersion: "0.1"
+id: superannotate-plans-pricing
+name: SuperAnnotate Plans & Pricing
+description: >
+  SuperAnnotate offers three tiers targeting teams at different stages of AI
+  development. All plans include access to the multimodal annotation editor,
+  data curation tools, analytics, and team management. Pricing is not publicly
+  disclosed; prospective customers must request a demo or contact sales.
+url: https://www.superannotate.com/pricing
+plans:
+  - name: Starter
+    description: >
+      Designed for teams getting started with AI data annotation and managing
+      small projects. Includes core annotation tools, data curation, analytics,
+      team and project management, and platform onboarding.
+    url: https://www.superannotate.com/pricing
+    price: Contact for pricing
+    pricingModel: custom
+    features:
+      - Fully customizable multimodal editor
+      - Image, video, text, and audio editors
+      - Data curation and exploration
+      - Analytics and insights
+      - Team and project management
+      - Orchestrate: 1,000 compute hours
+      - Platform onboarding
+  - name: Pro
+    description: >
+      Designed for teams scaling sophisticated AI projects and MLOps needs.
+      Includes all Starter features plus expanded compute hours, SSO, and
+      dedicated support channels.
+    url: https://www.superannotate.com/pricing
+    price: Contact for pricing
+    pricingModel: custom
+    features:
+      - All Starter features
+      - Orchestrate: 2,500 compute hours
+      - Single Sign-On (SSO)
+      - Dedicated Slack channel
+      - Dedicated customer success manager
+  - name: Enterprise
+    description: >
+      Tailored for well-established, recurring, and high-volume AI projects.
+      Includes all Pro features plus advanced analytics, highest compute
+      allocation, a dedicated solutions engineer, and AI DataOps consulting.
+    url: https://www.superannotate.com/pricing
+    price: Contact sales
+    pricingModel: custom
+    features:
+      - All Pro features
+      - Advanced analytics and insights
+      - Orchestrate: 10,000 compute hours
+      - Dedicated solutions engineer
+      - AI DataOps consulting

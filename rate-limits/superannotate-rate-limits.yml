@@ -1,0 +1,44 @@
+specificationVersion: "0.1"
+id: superannotate-rate-limits
+name: SuperAnnotate Rate Limits
+description: >
+  SuperAnnotate does not publicly document specific API rate limits in their
+  developer documentation. Authentication is performed via team-scoped SDK
+  tokens generated from the SuperAnnotate team settings panel. Rate limits, if
+  applied, are enforced at the token level. Users should consult SuperAnnotate
+  support or their account agreement for plan-specific rate limit details.
+url: https://doc.superannotate.com/docs/api-reference
+limits:
+  - name: SDK Token Authentication
+    description: >
+      API access requires a team-specific SDK token generated from the team
+      settings page. Tokens have a validity period displayed in the platform
+      and can be revoked at any time. Team Owners can generate or revoke tokens;
+      Team Admins may be granted view-only access to tokens.
+    scope: team
+    type: token
+    documented: false
+    notes: >
+      Specific request-per-minute or request-per-day limits are not publicly
+      disclosed. Contact SuperAnnotate support for rate limit details applicable
+      to your plan.
+  - name: Orchestrate Compute Hours
+    description: >
+      Automation and pipeline workloads are bounded by compute hour allocations
+      per plan tier rather than traditional request-rate limits. Starter plans
+      receive 1,000 compute hours, Pro plans receive 2,500 compute hours, and
+      Enterprise plans receive 10,000 compute hours.
+    scope: account
+    type: compute-hours
+    tiers:
+      - tier: Starter
+        limit: 1000
+        unit: compute hours
+      - tier: Pro
+        limit: 2500
+        unit: compute hours
+      - tier: Enterprise
+        limit: 10000
+        unit: compute hours
+    documented: true
+    url: https://www.superannotate.com/pricing
