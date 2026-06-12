@@ -78,6 +78,10 @@ common:
     url: rate-limits/superannotate-rate-limits.yml
   - type: FinOps
     url: finops/superannotate-finops.yml
+  - type: BlogPosts
+    url: blogs/blogs.json
+  - type: JSONLDContext
+    url: json-ld/superannotate-context.jsonld
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

@@ -1,0 +1,162 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "sa": "https://www.superannotate.com/vocab#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+
+    "SAClient": "sa:SAClient",
+    "Project": "sa:Project",
+    "Folder": "sa:Folder",
+    "Item": "sa:Item",
+    "Annotation": "sa:Annotation",
+    "AnnotationClass": "sa:AnnotationClass",
+    "Export": "sa:Export",
+    "CustomMetadata": "sa:CustomMetadata",
+    "Subset": "sa:Subset",
+    "Image": "sa:Image",
+    "Team": "sa:Team",
+    "TeamContributor": "sa:TeamContributor",
+    "Workflow": "sa:Workflow",
+    "Integration": "sa:Integration",
+    "Attachment": "sa:Attachment",
+    "PriorityScore": "sa:PriorityScore",
+    "OrchestrateModule": "sa:OrchestrateModule",
+    "AgentHub": "sa:AgentHub",
+    "MCPServer": "sa:MCPServer",
+
+    "projectId": {
+      "@id": "sa:projectId",
+      "@type": "xsd:integer"
+    },
+    "projectName": {
+      "@id": "sa:projectName",
+      "@type": "xsd:string"
+    },
+    "projectType": {
+      "@id": "sa:projectType",
+      "@type": "xsd:string"
+    },
+    "folderId": {
+      "@id": "sa:folderId",
+      "@type": "xsd:integer"
+    },
+    "folderName": {
+      "@id": "sa:folderName",
+      "@type": "xsd:string"
+    },
+    "itemId": {
+      "@id": "sa:itemId",
+      "@type": "xsd:integer"
+    },
+    "itemName": {
+      "@id": "sa:itemName",
+      "@type": "xsd:string"
+    },
+    "annotationId": {
+      "@id": "sa:annotationId",
+      "@type": "xsd:integer"
+    },
+    "annotationClassId": {
+      "@id": "sa:annotationClassId",
+      "@type": "xsd:integer"
+    },
+    "annotationClassName": {
+      "@id": "sa:annotationClassName",
+      "@type": "xsd:string"
+    },
+    "exportId": {
+      "@id": "sa:exportId",
+      "@type": "xsd:integer"
+    },
+    "exportName": {
+      "@id": "sa:exportName",
+      "@type": "xsd:string"
+    },
+    "subsetId": {
+      "@id": "sa:subsetId",
+      "@type": "xsd:integer"
+    },
+    "subsetName": {
+      "@id": "sa:subsetName",
+      "@type": "xsd:string"
+    },
+    "teamId": {
+      "@id": "sa:teamId",
+      "@type": "xsd:integer"
+    },
+    "teamName": {
+      "@id": "sa:teamName",
+      "@type": "xsd:string"
+    },
+    "contributorEmail": {
+      "@id": "sa:contributorEmail",
+      "@type": "xsd:string"
+    },
+    "contributorRole": {
+      "@id": "sa:contributorRole",
+      "@type": "xsd:string"
+    },
+    "workflowId": {
+      "@id": "sa:workflowId",
+      "@type": "xsd:integer"
+    },
+    "workflowName": {
+      "@id": "sa:workflowName",
+      "@type": "xsd:string"
+    },
+    "integrationId": {
+      "@id": "sa:integrationId",
+      "@type": "xsd:integer"
+    },
+    "integrationType": {
+      "@id": "sa:integrationType",
+      "@type": "xsd:string",
+      "@comment": "One of: aws, gcp, azure, databricks, snowflake"
+    },
+    "computeHours": {
+      "@id": "sa:computeHours",
+      "@type": "xsd:decimal"
+    },
+    "createdAt": {
+      "@id": "schema:dateCreated",
+      "@type": "xsd:dateTime"
+    },
+    "updatedAt": {
+      "@id": "schema:dateModified",
+      "@type": "xsd:dateTime"
+    },
+    "status": {
+      "@id": "sa:status",
+      "@type": "xsd:string"
+    },
+    "description": "schema:description",
+    "name": "schema:name",
+    "url": "schema:url"
+  },
+  "@graph": [
+    {
+      "@id": "https://www.superannotate.com",
+      "@type": "Organization",
+      "name": "SuperAnnotate",
+      "description": "AI data annotation platform for computer vision and NLP teams building machine learning models.",
+      "url": "https://www.superannotate.com",
+      "sameAs": [
+        "https://github.com/superannotateai",
+        "https://www.linkedin.com/company/superannotate/",
+        "https://x.com/superannotate"
+      ]
+    },
+    {
+      "@id": "https://api.superannotate.com",
+      "@type": "WebAPI",
+      "name": "SuperAnnotate REST API",
+      "description": "REST API and Python SDK for managing annotation projects, datasets, folders, items, annotations, annotation classes, exports, custom metadata, subsets, images, and team operations.",
+      "url": "https://doc.superannotate.com/docs/api-reference",
+      "provider": {
+        "@id": "https://www.superannotate.com"
+      },
+      "documentation": "https://superannotate.readthedocs.io/en/stable/api_reference/index.html",
+      "termsOfService": "https://www.superannotate.com"
+    }
+  ]
+}
