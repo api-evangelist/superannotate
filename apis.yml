@@ -1,7 +1,7 @@
 aid: superannotate
 name: SuperAnnotate
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 url: https://raw.githubusercontent.com/api-evangelist/superannotate/refs/heads/main/apis.yml
 created: 2026-06-12
 modified: 2026-06-12
@@ -38,7 +38,7 @@ apis:
       REST API and Python SDK for managing annotation projects, datasets,
       folders, items, annotations, annotation classes, exports, custom metadata,
       subsets, images, and team operations on the SuperAnnotate platform.
-    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://doc.superannotate.com/docs/api-reference
     baseURL: https://api.superannotate.com
     tags:
