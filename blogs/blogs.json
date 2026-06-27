@@ -4,50 +4,18 @@
   "url": "https://www.superannotate.com/blog",
   "rssUrl": null,
   "rssAvailable": false,
-  "lastChecked": "2026-06-12",
-  "notes": "No RSS/Atom feed discovered via common endpoints (/feed, /rss.xml, /blog/feed, /blog/rss.xml, /blog/feed.xml, /blog/atom.xml, /feed.xml). Blog is served as a JavaScript-rendered SPA without a machine-readable feed.",
-  "posts": [
-    {
-      "title": "RL Environments: Building Simulations, Tasks, and Reward Systems for AI Agents",
-      "url": "https://www.superannotate.com/blog",
-      "date": "2026-05-08",
-      "readTime": "10 min"
-    },
-    {
-      "title": "How Wizard Cut Evaluation Costs by 75% with SuperAnnotate and NVIDIA Nemotron",
-      "url": "https://www.superannotate.com/blog",
-      "date": "2026-03-16",
-      "readTime": "5 min"
-    },
-    {
-      "title": "Multi-agent LLMs in 2026 [+frameworks]",
-      "url": "https://www.superannotate.com/blog",
-      "date": "2026-03-10",
-      "readTime": "7 min"
-    },
-    {
-      "title": "RAG evaluation: Complete guide 2026",
-      "url": "https://www.superannotate.com/blog",
-      "date": "2026-03-02",
-      "readTime": "6 min"
-    },
-    {
-      "title": "Connect Your Agents Directly to Projects through SuperAnnotate MCP Server",
-      "url": "https://www.superannotate.com/blog",
-      "date": "2026-02-19",
-      "readTime": "4 min"
-    }
-  ],
+  "lastChecked": "2026-06-21",
+  "notes": "No RSS/Atom feed discovered via common endpoints (/blog/rss.xml, /blog/feed/, /rss.xml, /feed/, /blog/atom.xml). Blog is served as a JavaScript-rendered SPA without a machine-readable feed. HTML scraping fallback used; newest surfaced post dated 2026-05-08, older than the prior fetch cutoff, so nothing new this run.",
   "repo": "superannotate",
   "feeds": [
     {
-      "source": "https://x.com/superannotate",
-      "feed_url": "https://x.com/superannotate",
-      "title": "",
+      "source": "https://www.superannotate.com/blog",
+      "feed_url": "",
       "saved": 0,
-      "method": "none"
+      "method": "agent-scrape"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-27T13:13:43Z",
+  "agent_pulled": "2026-06-27"
 }
