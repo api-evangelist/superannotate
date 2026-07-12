@@ -56,6 +56,10 @@ apis:
       - type: Authentication
         url: https://doc.superannotate.com/docs/token-for-python-sdk
 common:
+  - type: TrustCenter
+    url: security/superannotate-trust-center.yml
+  - type: DomainSecurity
+    url: security/superannotate-domain-security.yml
   - type: Website
     url: https://www.superannotate.com
   - type: Documentation
