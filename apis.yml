@@ -1,7 +1,19 @@
 aid: superannotate
 name: SuperAnnotate
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: paid
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Paid · Requires approval
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/superannotate.png
 url: https://raw.githubusercontent.com/api-evangelist/superannotate/refs/heads/main/apis.yml
 created: 2026-06-12
 modified: 2026-06-12
