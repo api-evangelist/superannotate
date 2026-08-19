@@ -17,7 +17,7 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/superannot
 url: https://raw.githubusercontent.com/api-evangelist/superannotate/refs/heads/main/apis.yml
 created: 2026-06-12
 modified: 2026-06-12
-specificationVersion: "0.19"
+specificationVersion: '0.23'
 description: >
   SuperAnnotate is an AI data annotation platform purpose-built for computer
   vision and NLP teams that need to build, fine-tune, and iterate machine
