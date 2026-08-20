@@ -30,6 +30,19 @@ description: >
   Databricks, and Snowflake, supporting enterprise-grade data governance and
   security requirements.
 tags:
+  - Artificial Intelligence
+  - Annotation
+  - Data Labeling
+  - Computer-Vision
+  - NLP
+  - Machine-Learning
+  - Training Data
+  - Image Annotation
+  - Video Annotation
+  - Text Annotation
+  - Audio Annotation
+  - MLOps
+tags_raw:
   - AI
   - Annotation
   - Data Labeling
@@ -54,6 +67,13 @@ apis:
     humanURL: https://doc.superannotate.com/docs/api-reference
     baseURL: https://api.superannotate.com
     tags:
+      - Annotation
+      - Project
+      - Datasets
+      - Item
+      - Export
+      - Team Management
+    tags_raw:
       - Annotation
       - Projects
       - Datasets
