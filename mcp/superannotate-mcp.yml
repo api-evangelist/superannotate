@@ -1,0 +1,39 @@
+generated: '2026-09-11'
+method: probed
+source: https://mcp.superannotate.com/mcp
+status: published
+server:
+  name: superannotate
+  transport: http
+  url: https://mcp.superannotate.com/mcp
+deployment:
+  mode: remote
+  endpoint: https://mcp.superannotate.com/mcp
+  verified: probed
+  probe: live
+  checked: '2026-09-11'
+  source: docs-check 2026-09-12 (endpoint found in the provider's own documentation, then probed)
+tools_count: 10
+tools:
+- name: get_project_metadata
+  description: ''
+- name: list_projects
+  description: ''
+- name: get_folder_metadata
+  description: ''
+- name: list_folders
+  description: ''
+- name: get_item_metadata
+  description: ''
+- name: list_items
+  description: ''
+- name: set_item_status
+  description: ''
+- name: get_item_annotations
+  description: ''
+- name: set_item_annotations
+  description: ''
+- name: list_workflow_statuses
+  description: ''
+tools_source: live tools/list via initialize handshake, 2026-09-12 (signals/audit_mcp_authorship.py --probe)
+authorship: provider
