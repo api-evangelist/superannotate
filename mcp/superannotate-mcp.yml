@@ -16,24 +16,27 @@ deployment:
 tools_count: 10
 tools:
 - name: get_project_metadata
-  description: ''
+  description: Retrieve a project’s details by project ID.
 - name: list_projects
-  description: ''
+  description: Search projects by filtering by name and status.
 - name: get_folder_metadata
-  description: ''
+  description: Retrieve a folder’s details by folder ID.
 - name: list_folders
-  description: ''
+  description: Search folders by filtering by project ID, folder name and folder and status.
 - name: get_item_metadata
-  description: ''
+  description: Retrieve an item’s details by item ID.
 - name: list_items
-  description: ''
+  description: Search items by filtering by project ID, folder id, item id, item name, annotation status
+    and user assignments.
 - name: set_item_status
-  description: ''
+  description: Update the current item’s status.
 - name: get_item_annotations
-  description: ''
+  description: Fetches an item’s annotation’s json  by item ID.
 - name: set_item_annotations
-  description: ''
+  description: Sets or updates an item’s annotations with a given payload.
 - name: list_workflow_statuses
-  description: ''
+  description: Search workflows to retrieve available item statuses.
 tools_source: live tools/list via initialize handshake, 2026-09-12 (signals/audit_mcp_authorship.py --probe)
 authorship: provider
+descriptions_source: live tools/list (authorship probe or saved capture); filled by backfill-tools-from-authorship.py
+  --descriptions, 2026-09-28
