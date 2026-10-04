@@ -44,9 +44,9 @@ tags:
   - Artificial Intelligence
   - Annotation
   - Data Labeling
-  - Computer-Vision
+  - Computer Vision
   - NLP
-  - Machine-Learning
+  - Machine Learning
   - Training Data
   - Image Annotation
   - Video Annotation
@@ -66,6 +66,8 @@ tags_raw:
   - Text Annotation
   - Audio Annotation
   - MLOps
+  - Computer-Vision
+  - Machine-Learning
 apis:
   - aid: superannotate:superannotate-api
     name: SuperAnnotate API
