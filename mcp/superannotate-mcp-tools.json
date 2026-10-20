@@ -1,0 +1,528 @@
+{
+  "endpoint": "https://mcp.superannotate.com/mcp",
+  "captured": "2026-10-20",
+  "method": "initialize + tools/list (anonymous, no tool called; roadmap#992)",
+  "protocol_version": "2025-06-18",
+  "server_info": {
+    "name": "SuperAnnotate",
+    "version": "3.4.5"
+  },
+  "result": {
+    "tools": [
+      {
+        "name": "get_project_metadata",
+        "description": "Retrieve a project’s details by project ID.",
+        "inputSchema": {
+          "additionalProperties": false,
+          "properties": {
+            "project_id": {
+              "description": "The Project ID",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "project_id"
+          ],
+          "type": "object"
+        },
+        "_meta": {
+          "fastmcp": {
+            "tags": []
+          }
+        }
+      },
+      {
+        "name": "list_projects",
+        "description": "Search projects by filtering by name and status.",
+        "inputSchema": {
+          "additionalProperties": false,
+          "properties": {
+            "name": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Project name to search for"
+            },
+            "name__in": {
+              "anyOf": [
+                {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Project name to search for"
+            },
+            "id__in": {
+              "anyOf": [
+                {
+                  "items": {
+                    "type": "integer"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Project ids to search for"
+            },
+            "status": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Project status"
+            },
+            "chunk_size": {
+              "default": 100,
+              "description": "Number of projects per page",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        },
+        "_meta": {
+          "fastmcp": {
+            "tags": []
+          }
+        }
+      },
+      {
+        "name": "get_folder_metadata",
+        "description": "Retrieve a folder’s details by folder ID.",
+        "inputSchema": {
+          "additionalProperties": false,
+          "properties": {
+            "project_id": {
+              "description": "The project ID",
+              "type": "integer"
+            },
+            "folder_id": {
+              "description": "The Folder ID",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "project_id",
+            "folder_id"
+          ],
+          "type": "object"
+        },
+        "_meta": {
+          "fastmcp": {
+            "tags": []
+          }
+        }
+      },
+      {
+        "name": "list_folders",
+        "description": "Search folders by filtering by project ID, folder name and folder and status.",
+        "inputSchema": {
+          "additionalProperties": false,
+          "properties": {
+            "project_id": {
+              "description": "The project ID",
+              "type": "integer"
+            },
+            "name": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Folder name to search for"
+            },
+            "status": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Folder status"
+            }
+          },
+          "required": [
+            "project_id"
+          ],
+          "type": "object"
+        },
+        "_meta": {
+          "fastmcp": {
+            "tags": []
+          }
+        }
+      },
+      {
+        "name": "get_item_metadata",
+        "description": "Retrieve an item’s details by item ID.",
+        "inputSchema": {
+          "additionalProperties": false,
+          "properties": {
+            "project_id": {
+              "description": "The project ID",
+              "type": "integer"
+            },
+            "item_id": {
+              "description": "The item ID",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "project_id",
+            "item_id"
+          ],
+          "type": "object"
+        },
+        "_meta": {
+          "fastmcp": {
+            "tags": []
+          }
+        }
+      },
+      {
+        "name": "list_items",
+        "description": "Search items by filtering by project ID, folder id, item id, item name, annotation status and user assignments.",
+        "inputSchema": {
+          "additionalProperties": false,
+          "properties": {
+            "project_id": {
+              "description": "The project ID",
+              "type": "integer"
+            },
+            "folder_id": {
+              "description": "The folder ID to filter items",
+              "type": "integer"
+            },
+            "name": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Item name to search for"
+            },
+            "name__in": {
+              "anyOf": [
+                {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Item name to search for"
+            },
+            "id__in": {
+              "anyOf": [
+                {
+                  "items": {
+                    "type": "integer"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Item ID to search for"
+            },
+            "annotation_status": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Item annotation status"
+            },
+            "annotation_status__in": {
+              "anyOf": [
+                {
+                  "items": {
+                    "type": "integer"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Item annotation status"
+            },
+            "assignments__user_id": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Item assignments user ID"
+            },
+            "assignments__user_id__in": {
+              "anyOf": [
+                {
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "Item assignments user ID"
+            },
+            "chunk_size": {
+              "default": 200,
+              "description": "Number of items per page",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "project_id",
+            "folder_id"
+          ],
+          "type": "object"
+        },
+        "_meta": {
+          "fastmcp": {
+            "tags": []
+          }
+        }
+      },
+      {
+        "name": "set_item_status",
+        "description": "Update the current item’s status.",
+        "inputSchema": {
+          "additionalProperties": false,
+          "properties": {
+            "project_id": {
+              "description": "The project ID",
+              "type": "integer"
+            },
+            "folder_id": {
+              "description": "The folder ID",
+              "type": "integer"
+            },
+            "item_id": {
+              "description": "The item’s ID",
+              "type": "integer"
+            },
+            "status": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                }
+              ],
+              "description": "Item annotation status as an integer value (e.g., 1, 2, 3). To see all available status values and their corresponding names for a project, use the list_workflow_statuses tool. Use value field when status given as name (string).retrieve workflow_id first: call `get_project_metadata(project_id)` if not in contextretrieve valid statuses: call `list_workflow_statuses(project_id, workflow_id)` before any `set_item_status` call"
+            }
+          },
+          "required": [
+            "project_id",
+            "folder_id",
+            "item_id",
+            "status"
+          ],
+          "type": "object"
+        },
+        "_meta": {
+          "fastmcp": {
+            "tags": []
+          }
+        }
+      },
+      {
+        "name": "get_item_annotations",
+        "description": "Fetches an item’s annotation’s json  by item ID.",
+        "inputSchema": {
+          "additionalProperties": false,
+          "properties": {
+            "project_id": {
+              "description": "The project ID",
+              "type": "integer"
+            },
+            "item_id": {
+              "description": "The item ID",
+              "type": "integer"
+            },
+            "folder_id": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "The folder ID"
+            }
+          },
+          "required": [
+            "project_id",
+            "item_id"
+          ],
+          "type": "object"
+        },
+        "_meta": {
+          "fastmcp": {
+            "tags": []
+          }
+        }
+      },
+      {
+        "name": "set_item_annotations",
+        "description": "Sets or updates an item’s annotations with a given payload.",
+        "inputSchema": {
+          "additionalProperties": false,
+          "properties": {
+            "project_id": {
+              "description": "The project ID",
+              "type": "integer"
+            },
+            "item_id": {
+              "description": "The item ID",
+              "type": "integer"
+            },
+            "annotations": {
+              "additionalProperties": false,
+              "properties": {
+                "data": {
+                  "additionalProperties": {
+                    "items": {
+                      "additionalProperties": true,
+                      "type": "object"
+                    },
+                    "type": "array"
+                  },
+                  "type": "object"
+                },
+                "metadata": {
+                  "additionalProperties": true,
+                  "type": "object"
+                },
+                "comments": {
+                  "anyOf": [
+                    {
+                      "items": {
+                        "additionalProperties": true,
+                        "type": "object"
+                      },
+                      "type": "array"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ],
+                  "default": null
+                }
+              },
+              "required": [
+                "data",
+                "metadata"
+              ],
+              "type": "object",
+              "description": "IMPORTANT: The annotations parameter must contain the COMPLETE annotation objectit is not a partial update. whole annotation json should be providedfrom get_item_annotations, with only the target value fields modified.REQUIRED FIELDS: `metadata` AND `data` are MANDATORY. This call will FAIL without both fields. STEP 1: Call `get_item_annotations(project_id, item_id)` first. STEP 2: Copy the ENTIRE response including `metadata` and `data` and `comments`. STEP 3: Change only `value` fields, keep everything else. STEP 4: Pass the complete object here. Example: {\"metadata\": {...copied from get_item_annotations...}, \"data\": {...copied with modified values...}}"
+            },
+            "folder_id": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "default": null,
+              "description": "The folder ID"
+            }
+          },
+          "required": [
+            "project_id",
+            "item_id",
+            "annotations"
+          ],
+          "type": "object"
+        },
+        "_meta": {
+          "fastmcp": {
+            "tags": []
+          }
+        }
+      },
+      {
+        "name": "list_workflow_statuses",
+        "description": "Search workflows to retrieve available item statuses.",
+        "inputSchema": {
+          "additionalProperties": false,
+          "properties": {
+            "project_id": {
+              "description": "The project ID",
+              "type": "integer"
+            },
+            "workflow_id": {
+              "description": "The workflow ID",
+              "type": "integer"
+            }
+          },
+          "required": [
+            "project_id",
+            "workflow_id"
+          ],
+          "type": "object"
+        },
+        "_meta": {
+          "fastmcp": {
+            "tags": []
+          }
+        }
+      }
+    ]
+  }
+}
