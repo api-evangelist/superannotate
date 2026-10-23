@@ -24,9 +24,34 @@ edges:
     detected: '2026-10-20'
   detected_by: sweep-data-marketplaces.py
   detected: '2026-10-20'
+- partner_name: Hugging Face (hugging-face-hub)
+  partner: hugging-face
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: hugging-face-hub
+  evidence: https://huggingface.co/SuperAnnotate
+  mirror_of: hugging-face/integrations/hugging-face-integration-edges.yml
+  apps:
+  - SuperAnnotate/python-code-tracebacks-hard
+  - SuperAnnotate/ai-detector
+  - SuperAnnotate/ai-detector-low-fpr
+  - SuperAnnotate/roberta-large-llm-content-detector
+  - SuperAnnotate/Qwen2.5-32B-Instruct-python-code-tracebacks-fine-tuned-gguf
+  - SuperAnnotate/Qwen2.5-32B-Instruct-python-code-tracebacks-fine-tuned
+  listing_count: 2
+  detected: '2026-10-23'
+  detected_by: mirror-platform-listings.py
+  category: Hugging Face Hub datasets
+  badges:
+  - Verified publisher (Hugging Face verified organisation)
 generated: '2026-10-20'
 method: searched
 source:
 - https://marketplace.databricks.com/
 checked:
 - https://marketplace.databricks.com/
+- hugging-face/integrations/hugging-face-integration-edges.yml
